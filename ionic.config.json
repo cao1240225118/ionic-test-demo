@@ -1,5 +1,11 @@
 {
   "name": "ionic-app-base",
   "app_id": "",
-  "type": "ionic1"
+  "type": "ionic1",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://api.btctrade.com/api"
+    }
+  ]
 }

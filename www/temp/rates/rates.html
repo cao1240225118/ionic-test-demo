@@ -1,0 +1,13 @@
+<ion-view view-title="比特币汇率">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="currency in currencies | filter:{selected:true}">
+                {{currency.code}}--{{currency.text}}
+                <span class="price">high:{{currency.ticker.high}}<br>low:{{currency.ticker.low}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="bar-dark">
+        <h1 class="title"> Updated </h1>
+    </ion-footer-bar>
+</ion-view>
