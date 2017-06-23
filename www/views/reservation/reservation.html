@@ -1,0 +1,29 @@
+<ion-view view-title="预定视图">
+    <ion-content>
+        <div class="list">
+            <div class="item item-icon-left">
+                <i class="icon ion-key"></i>room:{{reservation.room}}
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-calendar"></i>check in:{{reservation.checkin | date:'mediumDate'}}
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-calendar"></i>check out:{{reservation.checkout| date:'mediumDate'}}
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-wifi"></i>wifi code:{{reservation.wifi}}
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-pricetags"></i>reta:{{reservation.rate | currency}}/晚
+            </div>
+
+             <div class="item item-icon-left">
+                <i class="icon ion-pricetags"></i>Total:{{reservation.rate * 7 | currency}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

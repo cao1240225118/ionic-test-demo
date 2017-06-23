@@ -1,0 +1,21 @@
+<!--
+
+当用户到达页脚或页脚附近时，ionInfiniteScroll指令允许你调用一个函数 。
+当用户滚动的距离超出底部的内容时，就会触发你指定的on-infinite。
+inmeditate-check = false
+由于无限滚动的机制显示，初始化的时候会触发两次载入的方法（控制器触发一次，无限组件会触发一次，一共两次），因此需要在初始化的时候禁用无限滚动，吧immeditate-check属性设为false
+-->
+   <ion-view view-title="餐厅视图">
+    <ion-content>
+        <div class="list card" ng-repeat="data in restaurants">
+            <div class="item">
+                <h2>{{data.name}}</h2>
+                <p>{{data.address}},{{data.city}}</p>
+            </div>
+            <div class="item item-image">
+                <img ng-src="{{data.image_url}}" alt="">
+            </div>
+        </div>
+        <ion-infinite-scroll on-infinite="getData()" ng-if="total > page" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>
